@@ -1,0 +1,22 @@
+<!-- frontend/public/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Finlab UI</title>
+  </head>
+  <body>
+    <h1>Finlab Test UI</h1>
+    <button onclick="showBacktest()">Run Backtest</button>
+    <pre id="output"></pre>
+
+    <script>
+      function showBacktest() {
+        const result = {
+          nav: [100, 101.5, 103.2, 104.9],
+          weights: {"AAPL": 0.25, "MSFT": 0.25, "GOOGL": 0.25, "AMZN": 0.25}
+        };
+        document.getElementById("output").innerText = JSON.stringify(result, null, 2);
+      }
+    </script>
+  </body>
+</html>
